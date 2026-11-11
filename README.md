@@ -212,13 +212,11 @@ pendaftaran-siswa-baru/
 
 ## 11. Dokumentasi
 
-> Simpan tangkapan layar di folder `docs/screenshots/` dengan nama berkas seperti di bawah ini, lalu gambar akan tampil otomatis di GitHub.
-
-### 10.1 Main Page
+### 11.1 Main Page
 
 ![](img/1.png)
 
-### 10.2 Pendaftaran oleh Pengguna
+### 11.2 Pendaftaran oleh Pengguna
 
 **Registrasi**
 
@@ -230,7 +228,7 @@ pendaftaran-siswa-baru/
 ![](img/4.png)
 ![](img/5.png)
 
-### 10.3 Sistem Kelola oleh Admin
+### 11.3 Sistem Kelola oleh Admin
 
 ![](img/6.png)
 ![](img/7.png)
