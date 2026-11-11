@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; connect-src 'self'; form-action 'self'; base-uri 'none'; object-src 'none'">
+<link rel="stylesheet" href="css/style.css">
+<title>Pendaftaran Siswa Baru | SMK Coding</title>
+</head>
+<body>
+<header class="nav" id="nav"></header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="tag" id="h-tag">Penerimaan Peserta Didik Baru</span>
+    <h1>Daftar online,<br>wujudkan karier <em>digitalmu</em>.</h1>
+    <p class="lead">Isi formulir, bayar biaya pendaftaran secara online, dan pantau status seleksi langsung dari satu dashboard.</p>
+    <div class="cta">
+      <a class="btn btn-accent btn-lg" id="cta-main" href="register.html">Mulai pendaftaran</a>
+      <a class="btn btn-ghost btn-lg" href="#alur">Lihat alur</a>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="facts" id="facts"></div>
+</div>
+
+<section class="block" id="jurusan">
+  <div class="wrap">
+    <h2>Pilihan jurusan</h2>
+    <p class="muted">Kuota diperbarui otomatis dari jumlah siswa yang sudah diterima.</p>
+    <div class="grid g2" id="jurusan-list"><p class="muted">Memuat…</p></div>
+  </div>
+</section>
+
+<section class="block" id="alur">
+  <div class="wrap">
+    <h2>Alur pendaftaran</h2>
+    <ol class="steps">
+      <li><b>Buat akun</b><br><span class="muted">Daftar dengan email dan kata sandi.</span></li>
+      <li><b>Isi formulir</b><br><span class="muted">Lengkapi data diri dan pilih jurusan.</span></li>
+      <li><b>Bayar online</b><br><span class="muted">Biaya pendaftaran via payment gateway.</span></li>
+      <li><b>Verifikasi &amp; hasil</b><br><span class="muted">Panitia memeriksa data lalu mengumumkan hasil.</span></li>
+    </ol>
+  </div>
+</section>
+<footer class="foot">© <span id="yr"></span> SMK Coding — Sistem Pendaftaran Siswa Baru</footer>
+<script src="js/config.js"></script>
+<script src="js/api.js"></script>
+<script src="js/common.js"></script>
+<script src="js/landing.js"></script>
+</body>
+</html>

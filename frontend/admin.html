@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; connect-src 'self'; form-action 'self'; base-uri 'none'; object-src 'none'">
+<link rel="stylesheet" href="css/style.css">
+<title>Panel Admin | PSB SMK Coding</title>
+</head>
+<body>
+<header class="nav" id="nav"></header>
+<main class="wrap">
+  <h2 class="no-print" id="page-title">Panel Admin</h2>
+  <div class="tabs" id="tabs" role="tablist">
+    <button class="on" data-tab="ringkasan">Ringkasan</button>
+    <button data-tab="pendaftar">Pendaftar</button>
+    <button data-tab="jurusan">Jurusan &amp; Kuota</button>
+    <button data-tab="pembayaran">Pembayaran</button>
+  </div>
+
+  <section id="tab-ringkasan"></section>
+
+  <section id="tab-pendaftar" class="hidden">
+    <form class="toolbar" id="filter">
+      <div class="field"><label for="q">Cari</label><input id="q" name="q" type="text" placeholder="Nama / no. pendaftaran / sekolah"></div>
+      <div class="field"><label for="fs">Status</label><select id="fs" name="status"><option value="">Semua</option></select></div>
+      <div class="field"><label for="fj">Jurusan</label><select id="fj" name="jurusan_id"><option value="">Semua</option></select></div>
+      <div class="field"><label for="so">Urutkan</label><select id="so" name="sort"><option value="">Terbaru</option><option value="nama">Nama A–Z</option></select></div>
+      <button class="btn" type="submit">Terapkan</button>
+      <a class="btn btn-ghost" id="btn-export" href="#">Ekspor CSV</a>
+    </form>
+    <div class="tablewrap"><table><thead><tr><th>No. Daftar</th><th>Nama</th><th>Jurusan</th><th>Sekolah asal</th><th>Bayar</th><th>Status</th><th></th></tr></thead><tbody id="tb-siswa"></tbody></table></div>
+    <div class="pager" id="pg-siswa"></div>
+  </section>
+
+  <section id="tab-jurusan" class="hidden">
+    <div class="toolbar"><button class="btn" id="btn-add-jur" type="button">+ Tambah jurusan</button></div>
+    <div class="tablewrap"><table><thead><tr><th>Kode</th><th>Nama</th><th>Kuota</th><th>Diterima</th><th>Pendaftar</th><th>Status</th><th></th></tr></thead><tbody id="tb-jur"></tbody></table></div>
+  </section>
+
+  <section id="tab-pembayaran" class="hidden">
+    <div class="toolbar"><div class="field"><label for="ps">Status</label><select id="ps"><option value="">Semua</option><option value="paid">Lunas</option><option value="pending">Pending</option><option value="failed">Gagal</option><option value="expired">Kedaluwarsa</option></select></div></div>
+    <div class="tablewrap"><table><thead><tr><th>Order ID</th><th>Pendaftar</th><th>Jumlah</th><th>Metode</th><th>Gateway</th><th>Status</th><th>Dibayar</th></tr></thead><tbody id="tb-bayar"></tbody></table></div>
+    <div class="pager" id="pg-bayar"></div>
+  </section>
+</main>
+<dialog id="dlg"></dialog>
+<script src="js/config.js"></script>
+<script src="js/api.js"></script>
+<script src="js/common.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>
